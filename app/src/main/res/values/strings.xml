@@ -18,6 +18,7 @@
     <!-- Settings -->
     <string name="instance">Instance</string>
     <string name="api_key">API key</string>
+    <string name="session_token">Session token</string>
     <string name="options">Settings</string>
     <string name="history">History</string>
     <string name="about">About</string>
@@ -53,6 +54,11 @@
     <string name="nothing_here">Nothing here.</string>
     <string name="use_free_api">Use free API</string>
     <string name="use_free_api_summary">Use the free instead of the paid Pro API.</string>
+    <!-- Kagi Settings -->
+    <string name="skip_definitions">Skip definitions</string>
+    <string name="skip_definitions_summary">Improve translation speed for small texts by skipping dictionary definitions</string>
+    <string name="use_best_model">Use best model</string>
+    <string name="use_best_model_summary">Better translations for paid Kagi search users</string>
     <!-- About -->
     <string name="github" translatable="false">GitHub</string>
     <string name="author">Author</string>
@@ -72,6 +78,7 @@
     <!-- Exception -->
     <string name="server_error">Error in communicating with the server.</string>
     <string name="missing_api_key">Please provide an API key in the settings.</string>
+    <string name="missing_session_token">Please provide a session token in the settings.</string>
     <string name="unknown_error">Unknown error</string>
     <!-- Additional Info -->
     <string name="detected_language">Detected language</string>
