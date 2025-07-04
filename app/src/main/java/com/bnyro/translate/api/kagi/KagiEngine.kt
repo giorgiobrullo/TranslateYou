@@ -98,9 +98,7 @@ class KagiEngine : TranslationEngine(
                             definition = secondary.definition
                         )
                     )
-                }
-                
-                definitions.ifEmpty { null }
+                }.takeIf [ it.isNotEmpty() }
             },
             similar = response.definition?.let { def ->
                 val synonyms = def.primaryMeaning?.synonyms.orEmpty() + def.secondaryMeanings.flatMap { it.synonyms }
