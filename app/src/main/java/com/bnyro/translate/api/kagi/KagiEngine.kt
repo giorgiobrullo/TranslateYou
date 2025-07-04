@@ -103,17 +103,9 @@ class KagiEngine : TranslationEngine(
                 definitions.ifEmpty { null }
             },
             similar = response.definition?.let { def ->
-                val synonyms = mutableListOf<String>()
-                
-                // Add synonyms from primary meaning
-                def.primaryMeaning?.synonyms?.let { synonyms.addAll(it) }
-                
-                // Add synonyms from secondary meanings
-                def.secondaryMeanings.forEach { meaning ->
-                    synonyms.addAll(meaning.synonyms)
-                }
-                
-                synonyms.distinct().ifEmpty { null }
+                val synonyms = def.primaryMeaning?.synonyms.orEmpty() + def.secondaryMeanings.flatMap { it.synonyms }
+               
+                synonyms.distinct().takeIf { it.isNotEmpty() }
             },
             examples = response.definition?.examples?.ifEmpty { null }
         )
